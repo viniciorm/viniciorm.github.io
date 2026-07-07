@@ -4,7 +4,7 @@
     "title": "Guía de instalación de Hermes en VPS",
     "summary": "Documentación práctica sobre cómo desplegar el agente autónomo Hermes en servidores virtuales privados (VPS), resolviendo problemas comunes de puertos, Docker y configuración de red.",
     "tags": ["IA", "Infraestructura", "VPS", "Docker"],
-    "link": "../hermes-agent-vps-guide/index.html",
+    "link": "https://viniciorm.github.io/hermes-agent-vps-guide/",
     "linkLabel": "Leer Artículo",
     "status": "Publicado"
   },
