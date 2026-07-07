@@ -1,0 +1,98 @@
+[
+  {
+    "id": "tu-asesor-financiero",
+    "title": "Tu Asesor Financiero",
+    "category": "Fintech / Automatización",
+    "tag": "fintech",
+    "description": "Automatización de captación y gestión de leads para servicios financieros, integrando formularios, seguimiento comercial, reportería y notificaciones.",
+    "role": "Levantamiento, diseño funcional, automatización y coordinación.",
+    "technologies": ["Google Sheets", "Apps Script", "Formularios", "CRM", "Meta Ads"],
+    "status": "Caso Privado",
+    "link": "",
+    "linkLabel": "Caso Privado"
+  },
+  {
+    "id": "automatizacion-rrss",
+    "title": "Automatización RRSS Tu Partner TI",
+    "category": "IA / Automatización / Marketing",
+    "tag": "ia",
+    "description": "Flujo automatizado para generación, revisión y publicación de contenidos en redes sociales usando IA y herramientas de automatización.",
+    "role": "Diseño de flujo, integración y validación funcional.",
+    "technologies": ["n8n", "Telegram", "Google Drive", "Google Sheets", "LinkedIn", "Instagram", "IA Generativa"],
+    "status": "En Desarrollo",
+    "link": "",
+    "linkLabel": "Próximamente Repo"
+  },
+  {
+    "id": "healthproof",
+    "title": "HealthProof",
+    "category": "Salud Digital / Interoperabilidad / Blockchain",
+    "tag": "salud",
+    "description": "Iniciativa de salud digital orientada a trazabilidad, interoperabilidad y seguridad de información clínica.",
+    "role": "Estrategia, levantamiento, articulación de stakeholders y propuesta comercial.",
+    "technologies": ["HL7 FHIR", "Salud Digital", "Blockchain", "Protección de datos"],
+    "status": "Web Activa",
+    "link": "https://healthproof.cl",
+    "linkLabel": "Ver Web"
+  },
+  {
+    "id": "culturago",
+    "title": "CulturaGO",
+    "category": "Web3 / Cultura / Hackathon",
+    "tag": "blockchain",
+    "description": "Prototipo de pasaporte cultural digital basado en blockchain para registrar experiencias culturales. Ganador del 3er lugar en la Hackathon Avalanche Latinoamérica.",
+    "role": "Ideación, prototipo, pitch y validación.",
+    "technologies": ["Blockchain", "NFT", "Pasaporte Digital", "Low-code / No-code", "Avalanche"],
+    "status": "Prototipo",
+    "link": "",
+    "linkLabel": "Repo Próximamente"
+  },
+  {
+    "id": "tu-perfume-ideal",
+    "title": "Tu Perfume Ideal",
+    "category": "E-commerce / IA / UX",
+    "tag": "ia",
+    "description": "MVP de e-commerce para búsqueda de perfumes alternativos mediante equivalencias, filtros y experiencia simplificada.",
+    "role": "Definición funcional, UX, contenido y pruebas.",
+    "technologies": ["Vite", "Vercel", "IA", "SEO / AEO"],
+    "status": "Web/Demo",
+    "link": "",
+    "linkLabel": "Demo Próximamente"
+  },
+  {
+    "id": "flechandes-ai",
+    "title": "Flechandes AI",
+    "category": "WhatsApp / IA / Logística",
+    "tag": "ia",
+    "description": "Diseño de MVP conversacional para atención, cotización y agendamiento de fletes por WhatsApp.",
+    "role": "Diseño funcional, arquitectura del flujo, estrategia de adopción y modelo de negocio.",
+    "technologies": ["WhatsApp Business", "IA", "n8n", "APIs", "OpenAI / Claude"],
+    "status": "En Desarrollo",
+    "link": "",
+    "linkLabel": "En Desarrollo"
+  },
+  {
+    "id": "nexa-plus",
+    "title": "Nexa+",
+    "category": "Fintech / Stellar / Inclusión Financiera",
+    "tag": "fintech",
+    "description": "Iniciativa basada en Stellar orientada a inclusión financiera, microfinanciamiento y nuevas alternativas de acceso a capital.",
+    "role": "Diseño conceptual, estrategia y coordinación con ecosistema blockchain.",
+    "technologies": ["Stellar", "Blockchain", "Fintech", "Inclusión Financiera"],
+    "status": "En Desarrollo",
+    "link": "",
+    "linkLabel": "Repo Próximamente"
+  },
+  {
+    "id": "hermes-vps-guide-project",
+    "title": "Hermes VPS Guide",
+    "category": "IA / Infraestructura / Tutorial",
+    "tag": "ia",
+    "description": "Guía completa y detallada sobre la instalación de Hermes en un VPS, documentando aprendizajes técnicos, solución de problemas y buenas prácticas.",
+    "role": "Documentación, implementación guiada y aprendizaje práctico.",
+    "technologies": ["VPS", "Hermes Agent", "Linux", "Docker", "IA"],
+    "status": "Artículo Publicado",
+    "link": "../hermes-agent-vps-guide/index.html",
+    "linkLabel": "Leer Artículo"
+  }
+]

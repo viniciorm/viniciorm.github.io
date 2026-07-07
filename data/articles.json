@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hermes-vps-guide-article",
+    "title": "Guía de instalación de Hermes en VPS",
+    "summary": "Documentación práctica sobre cómo desplegar el agente autónomo Hermes en servidores virtuales privados (VPS), resolviendo problemas comunes de puertos, Docker y configuración de red.",
+    "tags": ["IA", "Infraestructura", "VPS", "Docker"],
+    "link": "../hermes-agent-vps-guide/index.html",
+    "linkLabel": "Leer Artículo",
+    "status": "Publicado"
+  },
+  {
+    "id": "aprendizajes-ia-reales",
+    "title": "Aprendizajes usando IA en proyectos reales",
+    "summary": "Reflexiones sobre la implementación de modelos de lenguaje grande (LLMs) y agentes inteligentes en flujos corporativos reales, analizando la diferencia entre demos y sistemas estables.",
+    "tags": ["IA Generativa", "Product Management", "Casos Reales"],
+    "link": "",
+    "linkLabel": "Próximamente",
+    "status": "Borrador"
+  },
+  {
+    "id": "automatizacion-comercial-ia",
+    "title": "Automatización de procesos comerciales con IA",
+    "summary": "Cómo integrar n8n, CRM simples e IA generativa para calificar leads en tiempo real y optimizar la conversión de ventas sin necesidad de desarrollo de código a gran escala.",
+    "tags": ["Automatización", "Fintech", "n8n", "CRM"],
+    "link": "",
+    "linkLabel": "Próximamente",
+    "status": "Borrador"
+  },
+  {
+    "id": "vibecoding-mvps",
+    "title": "Vibecoding y desarrollo rápido de MVPs",
+    "summary": "Explorando la nueva era de desarrollo asistido por IA: cómo conceptualizar, iterar y desplegar productos mínimos viables en cuestión de horas en lugar de semanas.",
+    "tags": ["Vibecoding", "MVPs", "Innovación", "Vite"],
+    "link": "",
+    "linkLabel": "Próximamente",
+    "status": "Borrador"
+  },
+  {
+    "id": "stellar-blockchain-casos-reales",
+    "title": "Stellar, blockchain y casos de uso reales",
+    "summary": "Un análisis de la red Stellar y su potencial para resolver la inclusión financiera y micropagos transfronterizos mediante casos de uso reales de bajo costo operativo.",
+    "tags": ["Stellar", "Blockchain", "Fintech", "Inclusión"],
+    "link": "",
+    "linkLabel": "Próximamente",
+    "status": "Borrador"
+  },
+  {
+    "id": "reflexiones-master-ia",
+    "title": "Reflexiones del Máster en Inteligencia Artificial",
+    "summary": "Mis aprendizajes clave cursando el Máster en IA en BIG School (generación 2026), abordando desde redes neuronales hasta el impacto ético y económico en el negocio.",
+    "tags": ["Máster IA", "BIG School", "Educación", "IA"],
+    "link": "",
+    "linkLabel": "Próximamente",
+    "status": "Borrador"
+  }
+]
