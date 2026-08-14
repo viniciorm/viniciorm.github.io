@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Caso de éxito técnico anonimizado: plataforma web B2B industrial bilingüe, captación serverless, SEO internacional y optimización de rendimiento." />
+    <title>Caso técnico B2B industrial | Tu Partner TI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+    <header class="hero">
+      <nav class="nav container" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Tu Partner TI, inicio"><span>TP</span> Tu Partner TI</a>
+        <a class="nav-link" href="https://viniciorm.github.io/" target="_blank" rel="noopener">Ver portfolio</a>
+      </nav>
+      <section class="container hero-content" id="inicio">
+        <p class="eyebrow">Caso de éxito técnico · B2B industrial</p>
+        <h1>De requerimientos a producción: una plataforma comercial bilingüe, medible y sin backend tradicional.</h1>
+        <p class="lead">Arquitectura web para una empresa industrial chilena especializada en productos químicos y soluciones técnicas para la industria del cuero, con relaciones comerciales internacionales.</p>
+        <div class="metrics" aria-label="Resultados principales">
+          <div><strong>ES / EN</strong><span>Arquitectura física por idioma</span></div>
+          <div><strong>−82%</strong><span>Peso de imágenes principales</span></div>
+          <div><strong>Serverless</strong><span>Captación sin backend dedicado</span></div>
+        </div>
+      </section>
+    </header>
+
+    <main id="contenido">
+      <section class="section container intro">
+        <p class="section-label">El desafío</p>
+        <h2>Más que una landing: una solución comercial operable.</h2>
+        <p>La solución debía atender mercados locales e internacionales, capturar prospectos con contexto comercial y mantener disponible el sitio existente durante todo el desarrollo. El resultado combina desarrollo web, automatización, medición, SEO técnico y operación continua.</p>
+      </section>
+
+      <section class="section surface">
+        <div class="container">
+          <p class="section-label">Arquitectura</p>
+          <h2>Stack simple, propósito claro.</h2>
+          <div class="architecture" aria-label="Arquitectura de la solución">
+            <article><span class="tag">Entrada</span><h3>Visitante B2B</h3><p>Contenido por idioma, formularios y campañas.</p></article>
+            <span class="arrow" aria-hidden="true">→</span>
+            <article><span class="tag">Web</span><h3>Frontend estático</h3><p>HTML, CSS y JavaScript vanilla.</p></article>
+            <span class="arrow" aria-hidden="true">→</span>
+            <article><span class="tag">Hosting</span><h3>Vercel + GitHub</h3><p>Versionamiento, CI/CD y publicación.</p></article>
+            <span class="arrow" aria-hidden="true">→</span>
+            <article><span class="tag">Captación</span><h3>Serverless</h3><p>Apps Script + registro inicial de leads.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container grid-two">
+        <div>
+          <p class="section-label">Decisión clave</p>
+          <h2>ES y EN como páginas físicas independientes.</h2>
+          <p>La primera aproximación usaba una landing bilingüe controlada por JavaScript. Se identificó que el idioma de los campos enviados desde la versión inglesa podía no conservarse correctamente.</p>
+          <p>La migración a páginas físicas resolvió el problema y mejoró simultáneamente la robustez de datos, el SEO internacional y la mantenibilidad.</p>
+        </div>
+        <aside class="callout"><span>Problema → solución</span><strong>Traducción dinámica</strong><p>Riesgo de datos inconsistentes.</p><strong>Páginas ES y /en/</strong><p>Contexto de idioma estable, canonicals propios y hreflang correcto.</p></aside>
+      </section>
+
+      <section class="section container">
+        <p class="section-label">Capacidades integradas</p>
+        <h2>Una capa web conectada con objetivos comerciales.</h2>
+        <div class="cards">
+          <article><h3>Captación y analítica</h3><p>Formulario con idioma, consentimiento, área de interés, fuente y parámetros UTM para distinguir campañas, QR y otros canales.</p></article>
+          <article><h3>SEO internacional</h3><p>Canonical por idioma, hreflang es/en/x-default, sitemap, robots y solicitud de rastreo de las versiones publicadas.</p></article>
+          <article><h3>GEO / AI Search</h3><p>Contenido semántico explícito, JSON-LD, FAQ estructurada, <code>knowsAbout</code> y <code>llms.txt</code>.</p></article>
+          <article><h3>Performance</h3><p>WebP con fallback JPG, preload del hero, dimensiones declaradas para CLS y lazy loading de recursos secundarios.</p></article>
+        </div>
+      </section>
+
+      <section class="section surface">
+        <div class="container">
+          <p class="section-label">Operación segura</p>
+          <h2>Staging aislado y promoción controlada.</h2>
+          <ol class="timeline">
+            <li><b>01</b><div><h3>Staging</h3><p>Desarrollo dentro del proyecto con <code>noindex, nofollow</code>.</p></div></li>
+            <li><b>02</b><div><h3>Validación</h3><p>Pruebas funcionales y visuales sin afectar producción.</p></div></li>
+            <li><b>03</b><div><h3>Respaldo</h3><p>Conservación de la versión anterior antes del reemplazo.</p></div></li>
+            <li><b>04</b><div><h3>Producción</h3><p>Promoción mediante GitHub y Vercel; staging excluido de indexación.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section container results">
+        <p class="section-label">Resultado</p>
+        <h2>Una solución económica, mantenible y preparada para crecer.</h2>
+        <ul>
+          <li>Sitio responsive ES/EN con SEO técnico internacional.</li>
+          <li>Captación de leads trazable y preparada para evolución a CRM.</li>
+          <li>Arquitectura serverless sin infraestructura backend dedicada.</li>
+          <li>Mejor experiencia móvil gracias a una reducción aproximada de 82% en imágenes principales.</li>
+          <li>Capacidad demostrada para llevar una solución desde requerimientos hasta operación.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container"><strong>Tu Partner TI</strong><span>Arquitectura, desarrollo, automatización y operación digital.</span><small>Caso anonimizado para proteger la confidencialidad del cliente.</small></div>
+    </footer>
+  </body>
+</html>
