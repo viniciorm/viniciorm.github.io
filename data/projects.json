@@ -1,12 +1,37 @@
 [
   {
+    "id": "case-study-industrial-b2b",
+    "title": "Plataforma B2B Industrial Bilingüe",
+    "category": "Desarrollo Web / Arquitectura / SEO",
+    "tag": "web",
+    "description": "Caso técnico anonimizado: solución web B2B ES/EN con captación serverless, trazabilidad UTM, SEO internacional, GEO / AI Search y despliegue continuo.",
+    "role": "Arquitectura de solución, desarrollo web, integración serverless, SEO/GEO, analítica y despliegue.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vercel",
+      "Google Apps Script",
+      "SEO técnico"
+    ],
+    "status": "Caso de éxito",
+    "link": "case-studies/industrial-b2b/",
+    "linkLabel": "Ver Case Study"
+  },
+  {
     "id": "leads-financieros-automatizacion",
     "title": "Automatización de Leads Financieros",
     "category": "Fintech / Automatización",
     "tag": "fintech",
     "description": "Automatización completa de captación y gestión de leads para servicios financieros, integrando formularios, seguimiento comercial, reportería y notificaciones automáticas.",
     "role": "Levantamiento, diseño funcional, automatización y coordinación.",
-    "technologies": ["Google Sheets", "Apps Script", "Formularios", "CRM", "Meta Ads"],
+    "technologies": [
+      "Google Sheets",
+      "Apps Script",
+      "Formularios",
+      "CRM",
+      "Meta Ads"
+    ],
     "status": "Repositorio Privado",
     "link": "",
     "linkLabel": "Caso Privado"
@@ -18,7 +43,14 @@
     "tag": "ia",
     "description": "Flujo automatizado para generación, revisión y publicación automática de contenidos en LinkedIn usando inteligencia artificial, n8n y aprobaciones vía Telegram.",
     "role": "Diseño de flujo, integración y validación funcional.",
-    "technologies": ["n8n", "Telegram", "Google Drive", "Google Sheets", "LinkedIn", "IA Generativa"],
+    "technologies": [
+      "n8n",
+      "Telegram",
+      "Google Drive",
+      "Google Sheets",
+      "LinkedIn",
+      "IA Generativa"
+    ],
     "status": "Repositorio Público",
     "link": "https://github.com/viniciorm/post-automatic-linkedin-n8n",
     "linkLabel": "Ver Repositorio"
@@ -30,7 +62,12 @@
     "tag": "salud",
     "description": "Iniciativa de salud digital orientada a la trazabilidad, interoperabilidad y seguridad de información clínica descentralizada.",
     "role": "Estrategia, levantamiento, articulación de stakeholders y propuesta comercial.",
-    "technologies": ["HL7 FHIR", "Salud Digital", "Blockchain", "Protección de datos"],
+    "technologies": [
+      "HL7 FHIR",
+      "Salud Digital",
+      "Blockchain",
+      "Protección de datos"
+    ],
     "status": "Web Activa",
     "link": "https://healthproof.cl",
     "linkLabel": "Ver Web"
@@ -42,7 +79,13 @@
     "tag": "blockchain",
     "description": "Plataforma Web3 sobre Avalanche para trazabilidad e incentivos culturales mediante NFTs Soulbound y recompensas. Ganador del 3er lugar en Avalanche Hackathon 2025.",
     "role": "Ideación, prototipo, pitch y validación.",
-    "technologies": ["Avalanche", "Blockchain", "NFTs Soulbound", "Tether WDK", "Impacto Social"],
+    "technologies": [
+      "Avalanche",
+      "Blockchain",
+      "NFTs Soulbound",
+      "Tether WDK",
+      "Impacto Social"
+    ],
     "status": "Repositorio Público",
     "link": "https://github.com/viniciorm/culturago-impact",
     "linkLabel": "Ver Repositorio"
@@ -54,7 +97,13 @@
     "tag": "ia",
     "description": "Aplicación web móvil-first para venta guiada y recomendación inteligente de perfumes alternativos en Chile mediante equivalencias y filtros simplificados.",
     "role": "Definición funcional, UX, contenido y pruebas.",
-    "technologies": ["Vite", "Vercel", "IA", "SEO / AEO", "Venta Guiada"],
+    "technologies": [
+      "Vite",
+      "Vercel",
+      "IA",
+      "SEO / AEO",
+      "Venta Guiada"
+    ],
     "status": "Repositorio Público",
     "link": "https://github.com/viniciorm/tu-perfume-ideal",
     "linkLabel": "Ver Repositorio"
@@ -66,7 +115,13 @@
     "tag": "ia",
     "description": "Diseño de MVP conversacional inteligente para atención, cotización y agendamiento automatizado de fletes por WhatsApp.",
     "role": "Diseño funcional, arquitectura del flujo, estrategia de adopción y modelo de negocio.",
-    "technologies": ["WhatsApp Business", "IA", "n8n", "APIs", "OpenAI / Claude"],
+    "technologies": [
+      "WhatsApp Business",
+      "IA",
+      "n8n",
+      "APIs",
+      "OpenAI / Claude"
+    ],
     "status": "En Desarrollo",
     "link": "",
     "linkLabel": "En Desarrollo"
@@ -78,7 +133,13 @@
     "tag": "fintech",
     "description": "MVP de crédito conversacional para pymes que transforma interacciones tipo chat en acciones financieras verificables on-chain sobre Stellar Testnet usando Soroban.",
     "role": "Diseño conceptual, estrategia y coordinación con ecosistema blockchain.",
-    "technologies": ["Stellar", "Soroban", "Next.js", "Fintech", "Inclusión Financiera"],
+    "technologies": [
+      "Stellar",
+      "Soroban",
+      "Next.js",
+      "Fintech",
+      "Inclusión Financiera"
+    ],
     "status": "Repositorio Privado",
     "link": "",
     "linkLabel": "Caso Privado"
@@ -90,7 +151,13 @@
     "tag": "fintech",
     "description": "Plataforma de tokenización de hardware de alto valor sobre Stellar que permite a usuarios invertir en computadores reales y recibir rendimientos en USDC automatizados por Soroban.",
     "role": "Estrategia de producto, tokenómica y coordinación.",
-    "technologies": ["Stellar", "Soroban", "USDC", "Next.js", "Smart Contracts"],
+    "technologies": [
+      "Stellar",
+      "Soroban",
+      "USDC",
+      "Next.js",
+      "Smart Contracts"
+    ],
     "status": "Repositorio Público",
     "link": "https://github.com/viniciorm/hardblock",
     "linkLabel": "Ver Repositorio"
@@ -102,7 +169,12 @@
     "tag": "ia",
     "description": "Bot automatizado que sincroniza en tiempo real catálogo, stock y precios directamente desde el mayorista tecnológico Intcomex hacia tiendas WooCommerce vía API.",
     "role": "Lógica de negocio, integración y validación funcional.",
-    "technologies": ["WooCommerce", "Intcomex API", "Node.js", "Sincronización Automática"],
+    "technologies": [
+      "WooCommerce",
+      "Intcomex API",
+      "Node.js",
+      "Sincronización Automática"
+    ],
     "status": "Repositorio Público",
     "link": "https://github.com/viniciorm/intcomex-bot",
     "linkLabel": "Ver Repositorio"
@@ -114,7 +186,13 @@
     "tag": "ia",
     "description": "Guía práctica y repositorio sobre el despliegue del asistente autónomo Hermes Agent en VPS, documentando Docker, redes y soluciones operativas.",
     "role": "Documentación, implementación guiada y aprendizaje práctico.",
-    "technologies": ["VPS", "Hermes Agent", "Linux", "Docker", "IA"],
+    "technologies": [
+      "VPS",
+      "Hermes Agent",
+      "Linux",
+      "Docker",
+      "IA"
+    ],
     "status": "Repositorio Público",
     "link": "https://github.com/viniciorm/hermes-agent-vps-guide",
     "linkLabel": "Ver Repositorio"
