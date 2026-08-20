@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CulturaGO Tickets: Ticketing cultural con Raven MCP y Stellar Testnet</title>
+<meta name="description" content="Guía educativa del prototipo CulturaGO Tickets: arquitectura híbrida, QR firmado, Ed25519, Raven MCP, Stellar Testnet y Pasaporte Cultural.">
+<meta name="author" content="Marcos Vinicio Reyes / Tu Partner TI">
+<link rel="canonical" href="https://viniciorm.github.io/culturago-tickets-stellar-guide/">
+<meta property="og:type" content="article"><meta property="og:title" content="CulturaGO Tickets: de un ticket a una prueba verificable de participación"><meta property="og:description" content="Cómo usamos IA, Raven MCP y Stellar Testnet para construir un MVP de ticketing cultural con participación verificable."><meta property="og:url" content="https://viniciorm.github.io/culturago-tickets-stellar-guide/">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="mobile" id="menuBtn" aria-label="Abrir índice">☰</button>
+  <a class="brand" href="#top"><span class="brand-mark">✦</span><span><b>Marcos Vinicio Reyes</b> <small>| Tu Partner TI</small></span></a>
+  <div class="actions"><a href="https://github.com/viniciorm/culturago-tickets-stellar" target="_blank">GitHub</a><button id="themeBtn">Claro</button></div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <div class="label">DOCUMENTACIÓN</div><strong>CulturaGO Tickets</strong>
+  <div class="progress"><i id="progress"></i></div>
+  <nav id="nav"></nav>
+  <div class="repo-note"><b>Proyecto real</b>MVP construido para Stellar Builder Night con Raven MCP y transacciones reales en Stellar Testnet.<br><br><a href="https://github.com/viniciorm/culturago-tickets-stellar" target="_blank">Ver repositorio →</a></div>
+</aside>
+<main id="top">
+<section class="hero">
+  <div class="eyebrow">STELLAR BUILDER NIGHT · CULTURAGO</div>
+  <h1>De un ticket cultural a una prueba verificable de participación</h1>
+  <p>Documento educativo sobre cómo diseñamos y construimos CulturaGO Tickets usando IA, Raven MCP, firmas Ed25519 y Stellar Testnet, manteniendo una experiencia Web2 para el usuario final.</p>
+  <div class="hero-links"><a class="pill" href="https://github.com/viniciorm/culturago-tickets-stellar" target="_blank">Repositorio</a><a class="pill" href="https://temporary-flying-ridge-1ut66q9.vercel.app" target="_blank">Demo</a><a class="pill" href="https://stellar.expert/explorer/testnet/tx/fc4ad59d6db363839ce493a91e644a8379e4fbd59be82dc4c539733de1d57601" target="_blank">Transacción Testnet</a></div>
+</section>
+<section class="flow"><h2>Flujo del MVP</h2><div class="flow-row">
+<div class="step"><b>Evento</b><small>El usuario selecciona una experiencia cultural.</small></div><div class="arrow">→</div>
+<div class="step"><b>Ticket + QR</b><small>Payload firmado criptográficamente.</small></div><div class="arrow">→</div>
+<div class="step"><b>Check-in</b><small>Validación rápida y single-use.</small></div><div class="arrow">→</div>
+<div class="step"><b>Stellar Proof</b><small>Asistencia anclada en Testnet.</small></div>
+</div></section>
+<div class="content"><article class="article">
+<h2 id="intro">1. Qué construimos</h2>
+<p><strong>CulturaGO Tickets</strong> es un prototipo de ticketing para eventos culturales. La hipótesis fue simple: una entrada no debería perder todo su valor después del acceso, sino transformarse en una prueba verificable de participación.</p>
+<blockquote>Una entrada cultural no termina cuando entras al evento. Puede convertirse en evidencia de que participaste de la cultura.</blockquote>
+<p>El flujo completo del MVP fue: <strong>Evento → Ticket → QR → Check-in → Ticket USED → Prueba en Stellar → Pasaporte Cultural</strong>.</p>
+
+<h2 id="challenge">2. El desafío: IDEA → RAVEN → BUILD → STELLAR</h2>
+<p>El enfoque del Builder Night evitaba comenzar por una tecnología. En vez de decidir de antemano “hagamos un NFT” o “usemos Soroban”, primero definimos el problema y usamos <strong>Raven MCP</strong> para investigar qué componentes reales del ecosistema Stellar tenían sentido.</p>
+<div class="callout"><b>Aprendizaje clave:</b> no usar blockchain porque está disponible; usarla donde genera valor.</div>
+
+<h2 id="raven">3. Qué rol cumplió Raven MCP</h2>
+<p>Raven funcionó como fuente especializada de conocimiento Stellar para el agente de IA. El servidor MCP utilizado fue:</p>
+<pre><code>https://raven.stellar.org/mcp</code></pre>
+<p>Le planteamos el problema de ticketing sin imponer una arquitectura: ownership, QR, single-use, check-in, prueba de asistencia y futura integración con un Pasaporte Cultural.</p>
+
+<h2 id="alternativas">4. Tres arquitecturas consideradas</h2>
+<table><thead><tr><th>Alternativa</th><th>Idea</th><th>Complejidad</th><th>Decisión</th></tr></thead><tbody>
+<tr><td>Soroban full on-chain</td><td>Contrato controla el ciclo completo del ticket.</td><td>Alta</td><td>Descartada para el tiempo disponible.</td></tr>
+<tr><td>Stellar Classic</td><td>ManageData, cuentas, memo y Horizon.</td><td>Media-baja</td><td>Viable, pero menos flexible para UX inmediata.</td></tr>
+<tr><td>Arquitectura híbrida</td><td>QR firmado off-chain + prueba de asistencia en Stellar Testnet.</td><td>Media</td><td><strong>Elegida</strong>.</td></tr>
+</tbody></table>
+<p>La arquitectura híbrida separó dos necesidades distintas: validar el acceso con rapidez y registrar posteriormente una prueba verificable.</p>
+
+<h2 id="firma">5. Cómo se firma un ticket</h2>
+<p>El ticket contiene datos como <code>ticketId</code>, <code>eventId</code>, nombre del asistente, timestamp y nonce. CulturaGO firma ese contenido usando Ed25519.</p>
+<pre><code>{
+  ticketId: "CG-SBN-7711",
+  eventId: "sbn-2026-culturago",
+  attendeeName: "Alex",
+  issuedAt: 1787260000,
+  nonce: "n9284x",
+  signature: "..."
+}</code></pre>
+<p>La private key no se incluye nunca en el QR. La firma permite comprobar que el contenido no fue alterado.</p>
+
+<h2 id="issuer">6. Trusted issuer: por qué no basta con una firma válida</h2>
+<p>Durante la revisión final apareció un detalle de seguridad importante: un QR no puede definir por sí mismo cuál es la clave pública confiable. Un atacante podría crear su propio par de claves y firmar su propio payload.</p>
+<p>Por eso el scanner verifica la firma contra una <strong>clave pública de CulturaGO conocida por la aplicación</strong>. Si la clave del QR no coincide, se rechaza como <code>UNTRUSTED_ISSUER</code>.</p>
+
+<h2 id="checkin">7. Check-in y single-use</h2>
+<p>El scanner valida, en orden: estructura del QR, firma Ed25519, emisor confiable, existencia del ticket y estado de uso. Si todo es correcto, el ticket pasa de <code>VALID</code> a <code>USED</code>.</p>
+<pre><code>VALID → CHECK-IN SUCCESSFUL → USED
+USED  → TICKET ALREADY USED</code></pre>
+<p>En este MVP el estado se mantiene en un repositorio en memoria. Esto demuestra la lógica single-use, pero no es todavía un sistema antifraude distribuido para múltiples puertas o scanners simultáneos.</p>
+
+<h2 id="stellar">8. Dónde entra Stellar</h2>
+<p>Después del check-in, el sistema envía una transacción real a <strong>Stellar Testnet</strong> usando <code>@stellar/stellar-sdk</code>, Horizon, <code>ManageData</code> y Memo.</p>
+<pre><code>https://horizon-testnet.stellar.org
+StellarSdk.Networks.TESTNET</code></pre>
+<p>El objetivo no es almacenar todo el ticket on-chain. Stellar actúa como infraestructura de prueba de asistencia.</p>
+
+<h2 id="testnet">9. Qué significa que esté en Testnet</h2>
+<p>Testnet es la red de desarrollo y pruebas de Stellar. No usa valor económico real y es apropiada para prototipos, hackathons y validación técnica.</p>
+<p>Una transacción real generada durante el proyecto fue:</p>
+<pre><code>fc4ad59d6db363839ce493a91e644a8379e4fbd59be82dc4c539733de1d57601</code></pre>
+<p><a href="https://stellar.expert/explorer/testnet/tx/fc4ad59d6db363839ce493a91e644a8379e4fbd59be82dc4c539733de1d57601" target="_blank">Ver en Stellar Expert Testnet →</a></p>
+
+<h2 id="web2">10. Stellar como infraestructura invisible</h2>
+<p>La experiencia para el usuario sigue siendo Web2: obtiene un ticket, muestra un QR y entra al evento. No necesita wallet, seed phrase, XLM ni firmar transacciones manualmente.</p>
+<blockquote>Stellar debajo del producto, no delante del usuario.</blockquote>
+
+<h2 id="passport">11. El puente hacia el Pasaporte Cultural</h2>
+<p>Después del check-in, la asistencia puede alimentar un perfil de participación: festivales, conciertos, museos, talleres y otras experiencias. El ticket deja de ser un simple permiso de acceso y se convierte en el inicio de un historial cultural verificable.</p>
+
+<h2 id="seguridad">12. Qué corregimos durante el desarrollo</h2>
+<ul><li>Eliminamos cualquier posibilidad de confiar ciegamente en la public key del QR.</li><li>Eliminamos un fallback que podía generar un hash local y confundirlo con una transacción real de Stellar.</li><li>Separamos claramente <code>USED</code>, <code>CONFIRMED</code> y <code>STELLAR_UNAVAILABLE</code>.</li><li>No se guardan secret keys en Git ni dentro del QR.</li></ul>
+<div class="callout"><b>Regla:</b> si Stellar falla, el sistema debe decirlo. Nunca hay que presentar un hash local como si fuera una transacción on-chain.</div>
+
+<h2 id="stack">13. Stack utilizado</h2>
+<table><tbody><tr><th>Frontend</th><td>React, TypeScript, Vite, Tailwind CSS</td></tr><tr><th>Criptografía</th><td>Ed25519 mediante Stellar SDK</td></tr><tr><th>Blockchain</th><td>Stellar Testnet, Horizon, ManageData, Memo</td></tr><tr><th>IA</th><td>Vibe coding + Raven MCP</td></tr><tr><th>Infraestructura</th><td>GitHub + Vercel</td></tr></tbody></table>
+
+<h2 id="produccion">14. Qué faltaría para producción</h2>
+<ul><li>Backend seguro para emisión y firma.</li><li>Persistencia real de tickets y check-ins.</li><li>Concurrencia y múltiples scanners.</li><li>Autenticación de operadores.</li><li>KMS/HSM para claves.</li><li>Evaluar Soroban para estado distribuido y reglas de negocio.</li><li>Pagos, transferencia y reventa controlada.</li></ul>
+
+<h2 id="aprendizajes">15. Aprendizajes principales</h2>
+<ul><li>Blockchain no significa necesariamente token.</li><li>Un ticket no necesita obligatoriamente ser NFT.</li><li>No todo debe vivir on-chain.</li><li>Una arquitectura híbrida puede mejorar UX y reducir complejidad.</li><li>Raven fue más útil como herramienta de arquitectura que como simple buscador de documentación.</li><li>Diferenciar MVP de producción evita vender capacidades que aún no existen.</li></ul>
+
+<h2 id="cierre">16. Conclusión</h2>
+<p>El principal resultado fue demostrar una vertical completa: <strong>Evento → Ticket → QR → Check-in → USED → Stellar Proof → Participation Verified</strong>.</p>
+<blockquote>No construimos un “ticket blockchain”. Construimos un ticket cultural y usamos Stellar solamente donde aportaba valor.</blockquote>
+<p>Eso deja una base concreta para evolucionar CulturaGO Tickets hacia un componente real del Pasaporte Cultural.</p>
+</article>
+<aside class="on-page"><span>EN ESTA PÁGINA</span><div id="onPage"></div></aside></div>
+<footer>Guía educativa de CulturaGO Tickets · Stellar Builder Night · <a href="https://github.com/viniciorm/culturago-tickets-stellar" target="_blank">Código fuente</a></footer>
+</main>
+<script>
+const headings=[...document.querySelectorAll('.article h2')],nav=document.getElementById('nav'),onPage=document.getElementById('onPage'),progress=document.getElementById('progress');
+headings.forEach((h,i)=>{const b=document.createElement('button');b.textContent=`${String(i+1).padStart(2,'0')} · ${h.textContent.replace(/^\d+\.\s*/,'')}`;b.onclick=()=>h.scrollIntoView({behavior:'smooth'});nav.appendChild(b);const s=document.createElement('button');s.textContent=h.textContent.replace(/^\d+\.\s*/,'');s.onclick=()=>h.scrollIntoView({behavior:'smooth'});onPage.appendChild(s)});
+function update(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max?scrollY/max*100:0)+'%';let active=0;headings.forEach((h,i)=>{if(h.getBoundingClientRect().top<150)active=i});[...nav.children].forEach((b,i)=>b.classList.toggle('active',i===active));[...onPage.children].forEach((b,i)=>b.classList.toggle('active',i===active))}addEventListener('scroll',update);update();
+document.getElementById('themeBtn').onclick=()=>{const d=document.documentElement;const dark=d.dataset.theme==='dark';d.dataset.theme=dark?'light':'dark';document.getElementById('themeBtn').textContent=dark?'Oscuro':'Claro'};
+document.getElementById('menuBtn').onclick=()=>document.getElementById('sidebar').classList.toggle('open');
+</script>
+</body></html>
